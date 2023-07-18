@@ -1,0 +1,122 @@
+{
+  "Departamentos": [
+    {
+      "nomDepartamento": "Santander",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nomDepartamento": "Cundinamarca"
+    },
+    {
+      "nomDepartamento": "Amazonas",
+      "id": 3
+    },
+    {
+      "nomDepartamento": "Arauca",
+      "id": 4
+    }
+  ],
+  "Ciudades": [
+    {
+      "nomCiudad": "Bucaramanga",
+      "coordenadas": {
+        "lat": 7.1255169,
+        "lon": -73.1182624
+      },
+      "imagen": "https://getvico.com/blog/wp-content/uploads/2022/09/Planes-para-hacer-en-Bucaramanga.jpg",
+      "departamentoId": "1",
+      "id": 1
+    },
+    {
+      "nomCiudad": "Barrancabermeja",
+      "coordenadas": {
+        "lat": 7.0673313,
+        "lon": -73.8525627
+      },
+      "imagen": "https://www.terminaldetransporte.gov.co/wp-content/uploads/2022/06/barrancabermeja_nota.jpg",
+      "departamentoId": "1",
+      "id": 2
+    },
+    {
+      "nomCiudad": "Bogotá",
+      "coordenadas": {
+        "lat": 4.6529539,
+        "lon": -74.0835643
+      },
+      "imagen": "https://cloudfront-us-east-1.images.arcpublishing.com/infobae/JAAYCWLOQRHOTKSLAZAH37REYM.jpeg",
+      "departamentoId": "2",
+      "id": 3
+    },
+    {
+      "nomCiudad": "Cajicá",
+      "coordenadas": {
+        "lat": 4.9360114,
+        "lon": -74.03211632810394
+      },
+      "imagen": "https://www.culturacajica.gov.co/wp-content/uploads/2023/02/DSC_0006-scaled.jpg",
+      "departamentoId": "2",
+      "id": 4
+    },
+    {
+      "nomCiudad": "Leticia",
+      "coordenadas": {
+        "lat": -3.58553345,
+        "lon": -70.08939489274334
+      },
+      "imagen": "https://ecodestinos.com.co/wp-content/uploads/2023/02/leticia-parque-santander-letrero-leticia-550x358-1.jpg",
+      "departamentoId": "3",
+      "id": 5
+    },
+    {
+      "nomCiudad": "Manaos",
+      "coordenadas": {
+        "lat": 8.8931689,
+        "lon": -75.4431109
+      },
+      "imagen": "https://trayectoriasenviaje.com/wp-content/uploads/2017/04/manaos-50.jpg",
+      "departamentoId": "3",
+      "id": 6
+    },
+    {
+      "nomCiudad": "Arauquita",
+      "coordenadas": {
+        "lat": 6.791022099999999,
+        "lon": -71.3001506098226
+      },
+      "imagen": "https://radionacional-v3.s3.amazonaws.com/s3fs-public/styles/amp_1200x900_4_3/public/node/article/field_image/Arauquita%2004.jpg?itok=UCKozdJL",
+      "departamentoId": "4",
+      "id": 7
+    },
+    {
+      "nomCiudad": "Saravena",
+      "coordenadas": {
+        "lat": 6.90588155,
+        "lon": -71.83601630203836
+      },
+      "imagen": "https://files.rcnradio.com/public/2021-01/arauca-cese-saravena-3_0.jpg",
+      "departamentoId": "4",
+      "id": 8
+    },
+    {
+      "nomCiudad": "Floridablanca",
+      "coordenadas": {
+        "lat": 7.0625358,
+        "lon": -73.0858228
+      },
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Troncalmetroautop.JPG",
+      "departamentoId": "1",
+      "id": 9
+    },
+    {
+      "nomCiudad": "rionegro",
+      "coordenadas": {
+        "lat": 6.1536166,
+        "lon": -75.3741691
+      },
+      "imagen": "https://upload.wikimedia.org/wikipedia/commons/3/34/Rio_Negro_en_%C3%9Atica.jpg",
+      "departamentoId": "2",
+      "id": 11
+    }
+  ]
+}

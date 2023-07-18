@@ -1,0 +1,217 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./JS/main.js" type="module" defer ></script>
+    <script src="./JS/tema.js" defer></script>
+    <style id="customTheme">
+      body{
+          background-color: rgb(182, 182, 182);
+      }
+    </style>
+</head>
+  <body>
+    <!-- Header  -->
+    <nav class="navbar" >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <i class="bi bi-globe-americas"></i>
+            Departamentos de Colombia
+          </a>
+        </div>
+        <div class="position-absolute top-1 end-0">
+          <button class="btn btn-secundary" id="Intercambiar"><h2><i class="bi bi-eyedropper"></i></h2></button>
+          
+        </div>
+      </nav>
+    <!-- Fin Header  -->
+
+    <!-- Inicio Crud Departamento -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6">
+                <div class="row">
+                    <div class="col-6">
+                        <select class="form-select form-select-lg mb-3 alert alert-info" id="Departamento" aria-label=".form-select-lg example">
+                            <option selected disabled="disabled">Open this select menu</option>
+                          <!--   <option value="1">Cafetera</option>
+                            <option value="2">Del Sol</option>
+                            <option value="3">Three</option> -->
+                          </select>
+                          
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-primary" id="seleccionarDep">Seleccionar</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                          
+                    </div>
+                    <div class="col-6">
+                        <button id="activarAgregarDepartamento" class="btn btn-success">Agregar</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+              <div class="row">
+                <div class="col-12">
+<!-- Inicio container agregar Departamento   --------------------------------------->
+                  <div id="containerAgregarDep" class="container visually-hidden">
+                    <form id="formNuevoDep">
+                      <div class="mb-3">
+                        <label for="nomDepartamento" class="form-label">Nuevo Departamento</label>
+                        <input type="text" class="form-control" id="nomDepartamento" aria-describedby="nuevaRutaCaja">
+                        <div id="nuevaRutaCaja" class="form-text">Despues de oprimir guardar puede agregar las ciudades</div>
+                      </div>
+                      <button type="button" id="guardarDepartamento" class="btn btn-primary">Guardar</button>
+                       <button type="button" class="btn btn-primary position-relative" id="agregarPuntoDesdeFormCiudad" disabled data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                          +
+                          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            <label id="numeroDeAgregados">0</label>
+                            <span class="visually-hidden">unread messages</span>
+                          </span>
+                      </button>
+                      <button type="button" id="botonTerminarDeAgregar" class="btn btn-success ms-5" disabled="disabled" >Terminar</button>
+                    </form>
+                  </div>
+<!-- Fin container agregar Departamento   --------------------------------------->
+
+
+<!---  Inicio contenedor opciones Departamento ---------------------------------->
+                  <div class="container visually-hidden" id="containerOpcionesDep">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="container" id="icono">
+                          <h1 style="font-size: 70px;"><i style="color: rgb(0, 228, 19);" class="bi bi-signpost-split-fill"></i></h1>
+                        </div>
+
+                        <div class="container visually-hidden" id="containerEdicionDep">
+                          <div class="mb-3">
+                            <input type="text" class="form-control" id="editDep" aria-describedby="nuevaRutaCaja">
+                            <div id="nuevaRutaCaja" class="form-text">Edicion de Departamento</div>
+                            <button class="btn btn-light" id="botonEdicionDep">Guardar</button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="col-6">
+                        <div class="row ms-4">
+                          <div class="col-12">
+                            <button type="button" id="botonEditarDep" class="btn btn-info">Editar</button>
+                          </div>
+                          <div class="col-12 mt-1">
+                            <label id="labelOpcionesRuta"></label>
+                          </div>
+                          <div class="col-12 mt-2">
+                            <button type="button" id="botonEliminarDep" class="btn btn-light">Eliminar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+<!---  Fin contenedor opciones Departamento --------------------------------------->
+                </div>
+                <div class="col-2"></div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- Fin Crud Departamento  -->
+
+    <!-- Inicio Crud Ciudades -->
+    <div id="contenedorPuntos" class="container mt-2">
+        <div class="row">
+            <div class="col-6">
+                <div class="container">
+                    <div style="height: 70px;" class="alert alert-info" role="alert">
+                        <div class="container text-center">
+                            <h3><label  id="NombreSeleccion"></span>
+
+                            </label></h3>
+                        </div>
+                      </div>                      
+                </div>
+                <div class="container" id="BotonesCiudades">
+                    <div class="d-grid gap-2" id="verBotonesCiudades">
+            <!--             <button class="btn btn-outline-info" type="button">Manizales</button>
+                        <button class="btn btn-outline-info" type="button">Armenia</button>  -->
+                    </div>
+                </div>
+            </div>
+            <!-- mostrar datos info de ciudads-->
+            <div class="col-6" style="padding: 10px;">
+                <div class="container" id="verDescripcionCiudad">
+                    <div class="container">
+                      <div class="card" aria-hidden="true">
+                        <div class="card-body">
+                          <h5 class="card-title placeholder-glow">
+                            <span class="placeholder col-6"></span>
+                          </h5>
+                          <p class="card-text placeholder-glow">
+                            <span class="placeholder col-7"></span>
+                            <span class="placeholder col-4"></span>
+                            <span class="placeholder col-4"></span>
+                            <span class="placeholder col-6"></span>
+                            <span class="placeholder col-8"></span>
+                          </p>
+                          <a class="btn btn-primary disabled placeholder col-6"></a>
+                        </div>
+                          
+                    </div>
+                </div>
+            </div>
+            <!-- Fin Mostrar datos info de ciudads-->
+        </div>
+    </div>
+    <!-- Fin Crud Ciudades  -->
+
+    <!-- Modal agregar Ciudades  -->
+
+    <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body" >
+        <div class="container">
+          <form id="formNuevaCiudad">
+            <input hidden type="text" id="idDepartamento">
+            <input hidden type="text" id="idCiudad">
+            <div class="mb-3">
+              <label for="nomCiudad" class="form-label">Nueva Ciudad</label>
+              <input type="text" class="form-control"  id="nomCiudad" aria-describedby="nuevaRutaCaja">
+              <div id="nuevaRutaCaja" class="form-text">nombre de la nueva ciudad</div>
+            </div>
+            <div class="mb-3">
+            </div>
+            <div class="mb-3">
+              <label for="imagen" class="form-label">Imagen</label>
+              <input type="text" class="form-control"  id="imagen" aria-describedby="nuevaRutaCaja">
+              <div id="nuevaRutaCaja" class="form-text">Ingrese imagen a traves de link</div>
+            </div>
+            <button type="button" id="guardarCiudad" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"  data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Fin Modal Agregar Ciudades -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  </body>
+
+  <div class="container">
+  </div>
+</html>
