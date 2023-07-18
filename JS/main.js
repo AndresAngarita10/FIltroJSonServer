@@ -82,8 +82,6 @@ guardarDepartamento.addEventListener('click', function(e) {
         agregarPuntoDesdeFormCiudad.addEventListener('click', function (e){
             e.preventDefault();// cajaAgregarlat
             document.querySelector('#nomCiudad').value = '';
-            document.querySelector('#cajaAgregarlat').value = '';
-            document.querySelector('#cajaAgregarlon').value = '';
             document.querySelector('#imagen').value = '';
             document.querySelector('#guardarCiudad').setAttribute('value','1');
 
