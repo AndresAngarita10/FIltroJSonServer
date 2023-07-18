@@ -11,6 +11,9 @@ function cambiarTema(theme) {
         .modal-content{
             color: #333;
         }
+        .form-text{
+          color: #333;
+        }
       `;
     } else if (theme === 'dark') {
       customTheme.textContent = `
@@ -20,6 +23,9 @@ function cambiarTema(theme) {
         }
         .modal-content{
             color: #333;
+        }
+        .form-text{
+          color: #f4f4f4;
         }
       `;
     }
